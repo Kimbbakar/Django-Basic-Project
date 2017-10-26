@@ -14,4 +14,5 @@ def home(request):
 
 	response_html = '<br>'.join(boards_names)
 
+	return render(request,'home.html',{'boards':boards } )
 	return HttpResponse(response_html)
