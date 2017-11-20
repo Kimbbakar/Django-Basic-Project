@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
-
+from .forms import SignUpForm
 # Create your views here.
 
 
 def signup(request):
-    form = UserCreationForm()
+    form = SignUpForm()
     return render(request, 'signup.html',{'form':form } )
